@@ -1,6 +1,6 @@
 using System;
 
-namespace PersonStatus
+namespace ZombieAPI
 {
     public class PersonStatus
     {

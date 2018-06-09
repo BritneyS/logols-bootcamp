@@ -1,6 +1,6 @@
 using System;
 
-namespace RepoExample
+namespace ZombieAPI
 {
     public class Person
     {

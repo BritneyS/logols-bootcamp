@@ -6,7 +6,7 @@ using System.Data;
 using System.IO;
 using System.Text;
 
-namespace RepoExample
+namespace ZombieAPI
 {
     public class Repository
     {
