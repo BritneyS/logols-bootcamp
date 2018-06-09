@@ -1,5 +1,7 @@
 using System;
 
+
+
 namespace ZombieSimulator
 {
     public sealed class Zombie : Person
