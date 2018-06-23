@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <div id="container"></div>
+    </body>
+    <script>
+        let container =  document.getElementById("container");
+        let newParagraph = document.createElement("p");
+        newParagraph.innerText = "click me";
+        container.appendChild(newParagraph);
+        newParagraph.addEventListener("click", linkClicked);
+            function linkClicked() {
+                let newText = document.createElement("div");
+                newText.innerText = "more text";
+                container.appendChild(newText);
+            }
+        </script>
+</html>
+
+
+
+
+
