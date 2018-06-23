@@ -27,12 +27,32 @@ namespace ZombieAPI
             {
                 dbConnection.Open();
 
-                string sql = "SELECT Person.FirstName, Person.LastName, PStatus.StatusDescription "
+                string sql = "SELECT Person.FirstName, Person.LastName, Person.PersonStatusID, PStatus.StatusDescription "
                 + "FROM zombie.person Person "
                 + "INNER JOIN zombie.personstatus PStatus "
                 + "ON Person.PersonStatusID = PStatus.PersonStatusID;";
 
                 return dbConnection.Query<Person>(sql, commandType: CommandType.Text).ToList();
+
+            }
+        }
+
+        public void Insert(Person Person)
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                dbConnection.Execute(
+                    "INSERT into zombie.person (FirstName, LastName, PersonStatusID) "
+                    + "VALUES (@FirstName, @LastName, @PersonStatusID);",
+                     new {
+
+                        FirstName = Person.FirstName,
+                        LastName = Person.LastName,
+                        PersonStatusID = Person.PersonStatusID
+                    },
+                    commandType: CommandType.Text
+                );
 
             }
         }

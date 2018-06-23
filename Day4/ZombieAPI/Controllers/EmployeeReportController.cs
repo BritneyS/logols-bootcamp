@@ -33,8 +33,9 @@ namespace ZombieAPI.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]ZombieAPI.Person Person)
         {
+            repository.Insert(Person);
         }
 
         // PUT api/values/5

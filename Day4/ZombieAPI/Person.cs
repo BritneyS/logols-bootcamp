@@ -10,6 +10,8 @@ namespace ZombieAPI
         //public int PersonStatus {get; set;}
         //int PersonStatusID {get; set;}
         public string StatusDescription {get; set;}
+
+        public string PersonStatusID {get; set;}
         
     }
 }
