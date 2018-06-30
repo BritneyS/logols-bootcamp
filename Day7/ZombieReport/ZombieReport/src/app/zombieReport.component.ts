@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'zombieReport',
+  selector: 'zombie-report',
   templateUrl: './zombieStatusReport.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./zombieReport.component.css']
 })
-export class AppComponent {
-  title = 'app';
+export class ZombieReportComponent {
+
 }
