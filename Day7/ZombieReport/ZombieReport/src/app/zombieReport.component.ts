@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { PersonStatus } from './entities/PersonStatus';
+import { RouterModule, Routes } from '@angular/router';
+
 
 @Component({
   selector: 'zombie-report',
