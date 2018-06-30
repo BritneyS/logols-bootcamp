@@ -5,7 +5,7 @@ export class PersonStatus {
 
     public lastName:string;
 
-    public personStatusId:number;
+    public personStatusID:number;
 
     public statusDescription:string;
 

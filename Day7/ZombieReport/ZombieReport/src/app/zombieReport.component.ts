@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { PersonStatus } from './entities/PersonStatus';
 import { RouterModule, Routes } from '@angular/router';
 
+import { PersonStatusService } from './services/PersonStatusService';
 
 @Component({
   selector: 'zombie-report',
@@ -13,6 +14,16 @@ export class ZombieReportComponent {
 
   public statuses:PersonStatus[] = [];
 
+  public constructor (personStatusService: PersonStatusService) {
+    personStatusService.getAll().subscribe(result => { 
+      for (let status of result) {
+        this.statuses.push(status);
+      }
+    }, error => {
+      console.log(error)
+    });
+  }
+  /*
   public constructor() {
     this.statuses = [
       {
@@ -56,5 +67,5 @@ export class ZombieReportComponent {
       },
 
     ]
-  }
+  } */
 }
