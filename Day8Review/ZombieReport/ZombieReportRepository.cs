@@ -33,7 +33,7 @@ namespace ZombieReport
             {
                 dbConnection.Open();
                 dbConnection.Execute(
-                    "INSERT into zombie.person (FirstName, LastName, PersonStatusID) "
+                    "INSERT into zombiereport.person (FirstName, LastName, PersonStatusID) "
                     + "VALUES (@FirstName, @LastName, @PersonStatusID);",
                      new {
 

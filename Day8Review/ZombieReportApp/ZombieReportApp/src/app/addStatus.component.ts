@@ -17,6 +17,8 @@ export class AddStatusComponent {
   }
 
   public insertClick():void {
+    console.log('test');
+    console.log(this.personStatus);
     this.personStatusService.insert(this.personStatus).subscribe(() => {
       console.log("person inserted");
     }, error => console.error(error));
