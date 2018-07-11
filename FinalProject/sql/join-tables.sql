@@ -6,6 +6,6 @@ SELECT  m.MemberID, m.FirstName, m.LastName,
 FROM    member m
         INNER JOIN memberstatus ms
             ON m.MemberStatusID = ms.MemberStatusID
-        LEFT OUTER JOIN Class c
+        LEFT OUTER JOIN class c
             ON m.ClassID = c.ClassID
 ORDER BY MemberID ASC;

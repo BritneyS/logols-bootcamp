@@ -9,6 +9,8 @@ namespace GymMemberAPI
         public string LastName {get; set;}
         public int MemberStatusID {get; set;}
         public int ClassID {get; set;}
+        public string MemberStatusDescription {get; set;}
+        public string ClassDescription {get; set;}
         
     }
 }

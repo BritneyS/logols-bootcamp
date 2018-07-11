@@ -17,11 +17,11 @@ namespace GymMemberAPI
             {
                 dbConnection.Open();
 
-                string sql = "SELECT m.MemberID, m.FirstName, m.LastName, m.MemberStatusID, c.ClassID, ms.MemberStatusDescription, c.ClassDescription " 
-                + "FROM member m "
-                + "INNER JOIN memberstatus ms "
+                string sql = "SELECT m.MemberID, m.FirstName, m.LastName, m.MemberStatusID, m.ClassID, ms.MemberStatusDescription, c.ClassDescription " 
+                + "FROM gym.member m "
+                + "INNER JOIN gym.memberstatus ms "
                 + "ON m.MemberStatusID = ms.MemberStatusID "
-                + "LEFT OUTER JOIN Class c "
+                + "LEFT OUTER JOIN gym.class c "
                 + "ON m.ClassID = c.ClassID " 
                 + "ORDER BY MemberID ASC;";
 
