@@ -4,7 +4,7 @@ import { MemberStatus } from '../entities/MemberStatus';
 
 @Injectable()
 export class MemberStatusService {
-    url: string = "http://localhost:5000/api/GymMember";
+    url:string = "http://localhost:5000/api/GymMember";
 
     constructor(private http: HttpClient) { }
 

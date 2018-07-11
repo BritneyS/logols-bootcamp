@@ -5,6 +5,10 @@ export class MemberStatus {
 
     public lastName:string;
 
+    public memberStatusID:number;
+
+    public classID:number;
+
     public memberStatusDescription:string;
 
     public classDescription:string;

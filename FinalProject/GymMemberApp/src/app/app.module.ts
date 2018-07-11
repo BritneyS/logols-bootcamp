@@ -1,9 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-import { MemberStatus } from './entities/MemberStatus';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { GymAdminComponent } from './gymAdmin.component';
@@ -17,9 +14,7 @@ import { MemberStatusService } from './services/MemberStatusService';
   ],
   imports: [
     BrowserModule,
-    Injectable,
-    HttpClient,
-    MemberStatus
+    HttpClientModule
   ],
   providers: [
     MemberStatusService
