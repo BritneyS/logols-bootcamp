@@ -6,7 +6,7 @@ import { MemberStatusService } from './services/MemberStatusService';
 @Component({
   selector: 'gym-admin',
   templateUrl: './gymAdmin.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./gymAdmin.component.css']
 })
 export class GymAdminComponent {
   public title:string = "Gym Admin Panel";
