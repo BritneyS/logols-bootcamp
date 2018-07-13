@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { GymAdminComponent } from './gymAdmin.component';
+import { GymAdminComponent } from './comp-parent/gymAdmin.component';
 
 import { MemberStatusService } from './services/MemberStatusService';
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { MemberStatus } from './entities/MemberStatus';
+import { MemberStatus } from '../entities/MemberStatus';
 
-import { MemberStatusService } from './services/MemberStatusService';
+import { MemberStatusService } from '../services/MemberStatusService';
 
 @Component({
   selector: 'gym-admin',
