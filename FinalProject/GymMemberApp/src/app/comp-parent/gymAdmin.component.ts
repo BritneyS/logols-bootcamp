@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MemberStatus } from '../entities/MemberStatus';
+import { TableAllComponent } from '../comp-children/table-all/table-all.component';
 
 import { MemberStatusService } from '../services/MemberStatusService';
 

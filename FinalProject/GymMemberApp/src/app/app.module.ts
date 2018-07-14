@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { GymAdminComponent } from './comp-parent/gymAdmin.component';
 
 import { MemberStatusService } from './services/MemberStatusService';
+import { TableAllComponent } from './comp-children/table-all/table-all.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GymAdminComponent
+    GymAdminComponent,
+    TableAllComponent
   ],
   imports: [
     BrowserModule,

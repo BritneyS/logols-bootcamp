@@ -5,6 +5,38 @@
     align-items: center;
 }
 
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    order: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+    margin-bottom: 0;
+}
+
+.navbar li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: rgb(96, 108, 118);
+}
+
+.navbar li a:hover {
+    background-color: rgb(157, 95, 250);
+    color: rgb(255, 231, 245);
+}
+
 .app-main {
     background: rgb(253, 236, 250, 0.7);
 }
@@ -33,6 +65,7 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: rgb(157, 95, 250);
+    color: rgb(255, 231, 245);
 }
 
 .table-container {
