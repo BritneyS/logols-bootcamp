@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public title:string = "Gym Admin Panel";
+  public title:string = "Gym Member List";
   constructor() { }
 
   ngOnInit() {
