@@ -27,4 +27,10 @@ select {
     font-size: 0.75em;
     pointer-events: none;
     content: "▼";
-  }
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
