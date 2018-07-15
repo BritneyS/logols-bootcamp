@@ -5,6 +5,14 @@
     align-items: center;
 }
 
+.button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 25rem;
+    padding-right: 25rem;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;

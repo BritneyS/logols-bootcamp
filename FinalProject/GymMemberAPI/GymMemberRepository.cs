@@ -50,6 +50,19 @@ namespace GymMemberAPI
 
             }
         }
+
+        public void Delete(int id)
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                dbConnection.Execute(
+                    "DELETE "
+                    + "FROM member "
+                    + "WHERE member.MemberID = @MemberID;"
+                    ,new {MemberId = id} ,commandType: CommandType.Text);
+            }
+        }
     }
  
 }
