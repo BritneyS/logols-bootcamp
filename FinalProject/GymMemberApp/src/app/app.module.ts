@@ -26,8 +26,9 @@ const routes: Routes = [
   { path: 'yoga', component: TableYogaComponent },
   { path: 'pilates', component: TablePilatesComponent },
   { path: 'kickboxing', component: TableKickboxingComponent },
-  { path: '', component: GymAdminComponent },
-  { path: '', redirectTo: '/all', pathMatch: 'full' }
+  { path: 'add', component: AddMemberComponent },
+  { path: '', component: TableAllComponent }
+  /* { path: '', redirectTo: '/all', pathMatch: 'full' } */
 ];
 
 @NgModule({

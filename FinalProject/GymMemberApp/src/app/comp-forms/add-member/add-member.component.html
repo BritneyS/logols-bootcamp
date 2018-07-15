@@ -1,27 +1,37 @@
-<form>
-    <fieldset>
+<div class="container">
+<div class="form-field">
+    <div>
       <label for="FirstName">First Name</label>
-        <input id="FirstName" type="text" placeholder="First Name" 
+        <input id="FirstName" type="text" placeholder="First Name"
         [(ngModel)]="memberStatus.firstName">
 
       <label for="LastName">Last Name</label>
-        <input id="LastName" type="text" placeholder="Last Name" 
+        <input id="LastName" type="text" placeholder="Last Name"
         [(ngModel)]="memberStatus.lastName">
 
       <label for="MemberStatus">Member Status</label>
-      <select id="MemberStatus" [(ngModel)]="personStatus.personStatusID">
-        <option value="0-13">0-13</option>
-        <option value="14-17">14-17</option>
-        <option value="18-23">18-23</option>
-        <option value="24+">24+</option>
+      <div class="select-wrap">
+      <select required id="MemberStatus" [(ngModel)]="memberStatus.memberStatusID">
+        <option value="" disabled selected>Please Choose...</option>
+        <option value="1">Active</option>
+        <option value="2">Inactive</option>
+        <option value="3">Pending</option>
       </select>
-
-      <label for="commentField">Comment</label>
-      <textarea placeholder="Hi CJ …" id="commentField"></textarea>
-      <div class="example-send-yourself-copy">
-        <input type="checkbox" id="confirmField">
-        <label class="label-inline" for="confirmField">Send a copy to yourself</label>
       </div>
-      <input class="button-primary" type="submit" value="Send">
-    </fieldset>
-</form>
+
+      <label for="Class">Registered Class</label>
+      <div class="select-wrap">
+      <select required id="Class" [(ngModel)]="memberStatus.ClassID">
+        <option value="" disabled selected>Please Choose...</option>
+        <option value="1">Swim</option>
+        <option value="2">Yoga</option>
+        <option value="3">Pilates</option>
+        <option value="4">Kickboxing</option>
+      </select>
+      </div>
+    </div>
+    <div>
+        <a class="button" href="#" (click)="insertClick()">Add Member</a>
+    </div>
+  </div>
+</div>
