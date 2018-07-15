@@ -30,25 +30,26 @@ namespace GymMemberAPI
             }
         }
 
-        /* public void Insert(Person Person)
+        public void Insert(Member Member)
         {
             using (IDbConnection dbConnection = Connection)
             {
                 dbConnection.Open();
                 dbConnection.Execute(
-                    "INSERT into zombiereport.person (FirstName, LastName, PersonStatusID) "
-                    + "VALUES (@FirstName, @LastName, @PersonStatusID);",
+                    "INSERT into gym.person (FirstName, LastName, MemberStatusID, ClassID) "
+                    + "VALUES (@FirstName, @LastName, @MemberStatusID, @ClassID);",
                      new {
 
-                        FirstName = Person.FirstName,
-                        LastName = Person.LastName,
-                        PersonStatusID = Person.PersonStatusID
+                        FirstName = Member.FirstName,
+                        LastName = Member.LastName,
+                        MemberStatusID = Member.MemberStatusID,
+                        ClassID = Member.ClassID
                     },
                     commandType: CommandType.Text
                 );
 
             }
-        } */
+        }
     }
  
 }

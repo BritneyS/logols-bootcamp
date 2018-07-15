@@ -34,7 +34,7 @@ namespace GymMemberAPI.Controllers
         [HttpPost]
         public void Post([FromBody]GymMemberAPI.Member Member)
         {
-           // repository.Insert(Member);
+           repository.Insert(Member);
         }
 
         // PUT api/values/5
