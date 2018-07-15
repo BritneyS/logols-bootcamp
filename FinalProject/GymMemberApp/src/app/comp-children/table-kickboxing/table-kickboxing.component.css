@@ -1,3 +1,14 @@
+.container, #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-main {
+    background: rgb(253, 236, 250, 0.7);
+}
+
 table {
     border-collapse: collapse;
 }
