@@ -4,11 +4,11 @@ import { MemberStatus } from '../../entities/MemberStatus';
 import { MemberStatusService } from '../../services/MemberStatusService';
 
 @Component({
-  selector: 'app-table-all',
-  templateUrl: './table-all.component.html',
-  styleUrls: ['./table-all.component.css']
+  selector: 'app-table-swim',
+  templateUrl: './table-swim.component.html',
+  styleUrls: ['./table-swim.component.css']
 })
-export class TableAllComponent {
+export class TableSwimComponent {
 
   public statuses:MemberStatus[] = [];
 
@@ -21,4 +21,5 @@ export class TableAllComponent {
       console.log(error)
     });
   }
+
 }

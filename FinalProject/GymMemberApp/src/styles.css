@@ -1,6 +1,7 @@
 @import url('//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic');
 @import url('//cdn.rawgit.com/necolas/normalize.css/master/normalize.css');
 @import url('//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css');
+@import url('./app/comp-parent/gymAdmin.component.css');
 
 body {
     /* background: linear-gradient(120deg, rgb(249, 113, 224), rgb(157, 95, 250)); */
