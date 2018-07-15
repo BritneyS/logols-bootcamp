@@ -36,7 +36,7 @@ namespace GymMemberAPI
             {
                 dbConnection.Open();
                 dbConnection.Execute(
-                    "INSERT into gym.person (FirstName, LastName, MemberStatusID, ClassID) "
+                    "INSERT into gym.member (FirstName, LastName, MemberStatusID, ClassID) "
                     + "VALUES (@FirstName, @LastName, @MemberStatusID, @ClassID);",
                      new {
 
