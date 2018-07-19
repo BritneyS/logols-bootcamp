@@ -30,6 +30,19 @@ namespace GymMemberAPI
             }
         }
 
+         public Member Get(int id)
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                return dbConnection.Query<Member>(
+                    "SELECT  m.MemberID, m.FirstName, m.LastName, ms.MemberStatusDescription, c.ClassDescription "
+                    + "FROM gym.member m "
+                    + "WHERE m.MemberID = @MemberID;"
+                    ,new {MemberID = id} ,commandType: CommandType.Text).FirstOrDefault();
+            }
+        }
+
         public void Insert(Member Member)
         {
             using (IDbConnection dbConnection = Connection)
