@@ -36,7 +36,7 @@ namespace GymMemberAPI
             {
                 dbConnection.Open();
                 return dbConnection.Query<Member>(
-                    "SELECT  m.MemberID, m.FirstName, m.LastName, ms.MemberStatusDescription, c.ClassDescription "
+                    "SELECT m.MemberID, m.FirstName, m.LastName, ms.MemberStatusDescription, c.ClassDescription "
                     + "FROM gym.member m "
                     + "WHERE m.MemberID = @MemberID;"
                     ,new {MemberID = id} ,commandType: CommandType.Text).FirstOrDefault();
@@ -61,6 +61,26 @@ namespace GymMemberAPI
                     commandType: CommandType.Text
                 );
 
+            }
+        }
+
+        public void Update(Member Member)
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                dbConnection.Execute(
+                    "UPDATE gym.member "
+                    + "SET FirstName = @FirstName, LastName = @LastName, MemberStatusID = @MemberStatusID, ClassID = @ClassID "
+                    + "WHERE MemberID = @MemberID;"
+                    ,new {
+
+                        FirstName = Member.FirstName,
+                        LastName = Member.LastName,
+                        MemberStatusID = Member.MemberStatusID,
+                        ClassID = Member.ClassID
+                    } 
+                    ,commandType: CommandType.Text);
             }
         }
 
