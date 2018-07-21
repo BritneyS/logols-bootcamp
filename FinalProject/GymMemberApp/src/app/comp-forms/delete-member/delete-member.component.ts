@@ -16,11 +16,21 @@ export class DeleteMemberComponent {
     this.memberStatus = new MemberStatus();
   }
 
-  public insertClick():void {
+  public getIDClick():void {
     //console.log('test');
     console.log(this.memberStatus);
-    this.memberStatusService.insert(this.memberStatus).subscribe(() => {
-      console.log("person inserted");
+    this.memberStatusService.get(this.memberStatus.memberID).subscribe(() => {
+      console.log("person retrieved");
+      console.log(this.memberStatus);
+    }, error => console.error(error));
+  }
+
+
+  public deleteClick():void {
+    //console.log('test');
+    console.log(this.memberStatus);
+    this.memberStatusService.delete(this.memberStatus.memberID).subscribe(() => {
+      console.log("person deleted");
     }, error => console.error(error));
   }
 

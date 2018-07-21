@@ -28,6 +28,7 @@ const routes: Routes = [
   { path: 'pilates', component: TablePilatesComponent },
   { path: 'kickboxing', component: TableKickboxingComponent },
   { path: 'add', component: AddMemberComponent },
+  { path: 'delete', component: DeleteMemberComponent },
   { path: '', component: TableAllComponent }
   /* { path: '', redirectTo: '/all', pathMatch: 'full' } */
 ];

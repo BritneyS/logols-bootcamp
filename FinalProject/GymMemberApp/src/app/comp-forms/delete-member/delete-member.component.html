@@ -1,3 +1,103 @@
-<p>
-  delete-member works!
-</p>
+<div class="container">
+  <div class="form-field">
+      <div id="header" class="main-text app-main"><h3>Delete Member</h3></div>
+      <div>
+        <label for="MemberID">Member ID</label>
+          <input #memberIDRef id="MemberID" type="text" placeholder="Member ID"
+          [(ngModel)]="memberStatus.memberID">
+          <div class="button-row">
+            <a class="button" (click)="getIDClick(memberStatus.memberID)">Find</a>
+            <!-- <p>{{memberIDRef.value}}</p> -->
+          </div>
+        <!-- table -->
+        <div class="table-container app-main">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Member ID</th>
+                      <th id="col2">First Name</th>
+                      <th id="col3">Last Name</th>
+                      <th id="col5">Registered Class</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let status of statuses">
+                    <td *ngIf="status.memberID == memberIDRef.value">{{status.memberID}}</td>
+                    <td id="col2" *ngIf="status.memberID == memberStatus.memberID">{{status.firstName}}</td>
+                    <td id="col3" *ngIf="status.memberID == memberStatus.memberID">{{status.lastName}}</td>
+                    <td id="col5" *ngIf="status.memberID == memberStatus.memberID">{{status.classDescription}}</td>
+                  </tr>
+              </tbody>
+          </table>
+          </div> <!--end of table container-->
+        <label for="LastName">Last Name</label>
+          <input id="LastName" type="text" placeholder="Last Name"
+          [(ngModel)]="memberStatus.lastName">
+
+        <label for="MemberStatus">Member Status</label>
+        <div class="select-wrap">
+        <select required id="MemberStatus" [(ngModel)]="memberStatus.memberStatusID">
+          <option value="" disabled selected>Please Choose...</option>
+          <option value="1">Active</option>
+          <option value="2">Inactive</option>
+          <option value="3">Pending</option>
+        </select>
+        </div>
+
+        <label for="Class">Registered Class</label>
+        <div class="select-wrap">
+        <select required id="Class" [(ngModel)]="memberStatus.ClassID">
+          <option value="" disabled selected>Please Choose...</option>
+          <option value="1">Swim</option>
+          <option value="2">Yoga</option>
+          <option value="3">Pilates</option>
+          <option value="4">Kickboxing</option>
+        </select>
+        </div>
+      </div>
+      <div class="button-row">
+          <a class="button" href="http://localhost:4200">Go Back</a>
+          <a class="button" (click)="insertClick()">Add Member</a>
+      </div>
+  </div>
+</div>
+
+<!--
+  @Component({
+  selector: 'app-key-up3',
+  template: `
+    <input #box (keyup.enter)="onEnter(box.value)">
+    <p>{{value}}</p>
+  `
+})
+export class KeyUpComponent_v3 {
+  value = '';
+  onEnter(value: string) { this.value = value; }
+}
+
+
+
+*ngIf directive doesn't need interpolation
+
+<div class="m-c-img-c">
+    <img *ngIf="offer.U_D__IMAGE" [src]="imagePath + offer.U_D__IMAGE">
+    <div *ngIf="!offer.U_D__IMAGE">
+      <i class="materials-icons">photo_camera</i>
+      <div class="m-c-img-ni">No Images</div>
+    </div>
+</div>
+
+You could make it more better using *ngIf else
+
+<div class="m-c-img-c">
+    <img *ngIf="offer.U_D__IMAGE else noResults" [src]="imagePath + offer.U_D__IMAGE" />
+    <ng-template #noResults>
+       <div>
+         <i class="materials-icons">photo_camera</i>
+         <div class="m-c-img-ni">No Images</div>
+       </div>
+    </ng-template>
+</div>
+
+
+-->
