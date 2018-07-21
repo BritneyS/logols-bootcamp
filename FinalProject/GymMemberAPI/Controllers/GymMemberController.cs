@@ -23,27 +23,29 @@ namespace GymMemberAPI.Controllers
             return repository.GetAll();
         }
 
-        // GET api/values/5
+        // GET api/GymMember/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Member Get(int id)
         {
-            return "value";
+            return repository.Get(id);
         }
 
-        // POST api/values
+        // POST api/GymMember
         [HttpPost]
         public void Post([FromBody]GymMemberAPI.Member Member)
         {
            repository.Insert(Member);
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        // PUT api/GymMember/5
+        //[HttpPut("{id}")]
+        [HttpPut]
+        public void Put(/*int id,*/ [FromBody]GymMemberAPI.Member Member)
         {
+            repository.Update(Member);
         }
 
-        // DELETE api/values/5
+        // DELETE api/GymMember/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

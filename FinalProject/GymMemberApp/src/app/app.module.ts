@@ -17,6 +17,7 @@ import { TableYogaComponent } from './comp-children/table-yoga/table-yoga.compon
 import { TablePilatesComponent } from './comp-children/table-pilates/table-pilates.component';
 import { TableKickboxingComponent } from './comp-children/table-kickboxing/table-kickboxing.component';
 import { AddMemberComponent } from './comp-forms/add-member/add-member.component';
+import { DeleteMemberComponent } from './comp-forms/delete-member/delete-member.component';
 
 const routes: Routes = [
   { path: 'gymAdmin', component: GymAdminComponent },
@@ -42,7 +43,8 @@ const routes: Routes = [
     TableYogaComponent,
     TablePilatesComponent,
     TableKickboxingComponent,
-    AddMemberComponent
+    AddMemberComponent,
+    DeleteMemberComponent
   ],
   imports: [
     BrowserModule,

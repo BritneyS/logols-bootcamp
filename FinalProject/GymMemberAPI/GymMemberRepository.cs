@@ -30,7 +30,7 @@ namespace GymMemberAPI
             }
         }
 
-         public Member Get(int id)
+        public Member Get(int id)
         {
             using (IDbConnection dbConnection = Connection)
             {
@@ -38,6 +38,10 @@ namespace GymMemberAPI
                 return dbConnection.Query<Member>(
                     "SELECT m.MemberID, m.FirstName, m.LastName, ms.MemberStatusDescription, c.ClassDescription "
                     + "FROM gym.member m "
+                    + "INNER JOIN gym.memberstatus ms "
+                    + "ON m.MemberStatusID = ms.MemberStatusID "
+                    + "LEFT OUTER JOIN gym.class c "
+                    + "ON m.ClassID = c.ClassID "
                     + "WHERE m.MemberID = @MemberID;"
                     ,new {MemberID = id} ,commandType: CommandType.Text).FirstOrDefault();
             }
