@@ -3,13 +3,18 @@
       <div id="header" class="main-text app-main"><h3>Delete Member</h3></div>
       <div>
         <label for="MemberID">Member ID</label>
-          <input #memberIDRef id="MemberID" type="text" placeholder="Member ID"
-          [(ngModel)]="memberStatus.memberID">
+          <input #memberIDRef id="MemberID" type="number" placeholder="Member ID"
+          [(ngModel)]="memberStatus.memberID"> 
+          <!-- <input #memberIDRef id="MemberID" type="number" placeholder="Member ID"
+          [(ngModel)]="filter"> -->
           <div class="button-row">
             <a class="button" (click)="getIDClick(memberStatus.memberID)">Find</a>
-            <!-- <p>{{memberIDRef.value}}</p> -->
+            <p>{{memberIDRef.value}}</p>
+            
+
           </div>
-        <!-- table -->
+        
+        <!-- 
         <div class="table-container app-main">
           <table>
               <thead>
@@ -29,7 +34,7 @@
                   </tr>
               </tbody>
           </table>
-          </div> <!--end of table container-->
+          </div> end of table container--> 
         <label for="LastName">Last Name</label>
           <input id="LastName" type="text" placeholder="Last Name"
           [(ngModel)]="memberStatus.lastName">

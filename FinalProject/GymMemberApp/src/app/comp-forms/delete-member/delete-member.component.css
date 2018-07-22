@@ -14,7 +14,7 @@
     margin: 50px;
 }
 
-input[type=text] {
+input[type=text], input[type=number] {
     background: rgb(255, 231, 245);
 }
 
