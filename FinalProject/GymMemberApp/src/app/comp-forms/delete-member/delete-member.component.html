@@ -14,7 +14,7 @@
 
           </div>
         
-        <!-- 
+        <!-- table -->
         <div class="table-container app-main">
           <table>
               <thead>
@@ -27,14 +27,14 @@
               </thead>
               <tbody>
                   <tr *ngFor="let status of statuses">
-                    <td *ngIf="status.memberID == memberIDRef.value">{{status.memberID}}</td>
+                    <td *ngIf="status.memberID == memberStatus.memberID">{{status.memberID}}</td>
                     <td id="col2" *ngIf="status.memberID == memberStatus.memberID">{{status.firstName}}</td>
                     <td id="col3" *ngIf="status.memberID == memberStatus.memberID">{{status.lastName}}</td>
                     <td id="col5" *ngIf="status.memberID == memberStatus.memberID">{{status.classDescription}}</td>
                   </tr>
               </tbody>
           </table>
-          </div> end of table container--> 
+          </div> <!-- end of table container--> 
         <label for="LastName">Last Name</label>
           <input id="LastName" type="text" placeholder="Last Name"
           [(ngModel)]="memberStatus.lastName">
