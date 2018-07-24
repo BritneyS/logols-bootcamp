@@ -3,15 +3,12 @@
       <div id="header" class="main-text app-main"><h3>Delete Member</h3></div>
       <div>
         <label for="MemberID">Member ID</label>
-          <input #memberIDRef id="MemberID" type="number" placeholder="Member ID"
+          <input id="MemberID" type="number" placeholder="Member ID"
           [(ngModel)]="memberStatus.memberID"> 
           <!-- <input #memberIDRef id="MemberID" type="number" placeholder="Member ID"
           [(ngModel)]="filter"> -->
           <div class="button-row">
             <a class="button" (click)="getIDClick(memberStatus.memberID)">Find</a>
-            <p>{{memberIDRef.value}}</p>
-            
-
           </div>
         
         <!-- table -->
@@ -42,42 +39,3 @@
   </div>
 </div>
 
-<!--
-  @Component({
-  selector: 'app-key-up3',
-  template: `
-    <input #box (keyup.enter)="onEnter(box.value)">
-    <p>{{value}}</p>
-  `
-})
-export class KeyUpComponent_v3 {
-  value = '';
-  onEnter(value: string) { this.value = value; }
-}
-
-
-
-*ngIf directive doesn't need interpolation
-
-<div class="m-c-img-c">
-    <img *ngIf="offer.U_D__IMAGE" [src]="imagePath + offer.U_D__IMAGE">
-    <div *ngIf="!offer.U_D__IMAGE">
-      <i class="materials-icons">photo_camera</i>
-      <div class="m-c-img-ni">No Images</div>
-    </div>
-</div>
-
-You could make it more better using *ngIf else
-
-<div class="m-c-img-c">
-    <img *ngIf="offer.U_D__IMAGE else noResults" [src]="imagePath + offer.U_D__IMAGE" />
-    <ng-template #noResults>
-       <div>
-         <i class="materials-icons">photo_camera</i>
-         <div class="m-c-img-ni">No Images</div>
-       </div>
-    </ng-template>
-</div>
-
-
--->

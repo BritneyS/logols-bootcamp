@@ -1,3 +1,72 @@
-<p>
-  edit-member works!
-</p>
+<div class="container">
+  <div class="form-field">
+      <div id="header" class="main-text app-main"><h3>Edit Member</h3></div>
+      <div>
+        <label for="MemberID">Member ID</label>
+          <input id="MemberID" type="number" placeholder="Member ID"
+          [(ngModel)]="memberStatus.memberID"> 
+          <!-- <input #memberIDRef id="MemberID" type="number" placeholder="Member ID"
+          [(ngModel)]="filter"> -->
+          <div class="button-row">
+            <a class="button" (click)="getIDClick(memberStatus.memberID)">Find</a>
+          </div>
+        
+        <!-- table -->
+        <div class="table-container app-main">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Member ID</th>
+                      <th id="col2">First Name</th>
+                      <th id="col3">Last Name</th>
+                      <th id="col5">Registered Class</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let status of statuses">
+                    <td *ngIf="status.memberID == memberStatus.memberID">{{status.memberID}}</td>
+                    <td id="col2" *ngIf="status.memberID == memberStatus.memberID">{{status.firstName}}</td>
+                    <td id="col3" *ngIf="status.memberID == memberStatus.memberID">{{status.lastName}}</td>
+                    <td id="col5" *ngIf="status.memberID == memberStatus.memberID">{{status.classDescription}}</td>
+                  </tr>
+              </tbody>
+          </table>
+          </div> <!-- end of table container-->
+        <div>
+          <label for="FirstName">First Name</label>
+            <input id="FirstName" type="text" placeholder="First Name"
+            [(ngModel)]="memberStatus.firstName">
+    
+          <label for="LastName">Last Name</label>
+            <input id="LastName" type="text" placeholder="Last Name"
+            [(ngModel)]="memberStatus.lastName">
+    
+          <label for="MemberStatus">Member Status</label>
+          <div class="select-wrap">
+          <select required id="MemberStatus" [(ngModel)]="memberStatus.memberStatusID">
+            <option value="" disabled selected>Please Choose...</option>
+            <option value="1">Active</option>
+            <option value="2">Inactive</option>
+            <option value="3">Pending</option>
+          </select>
+          </div>
+    
+          <label for="Class">Registered Class</label>
+          <div class="select-wrap">
+          <select required id="Class" [(ngModel)]="memberStatus.ClassID">
+            <option value="" disabled selected>Please Choose...</option>
+            <option value="1">Swim</option>
+            <option value="2">Yoga</option>
+            <option value="3">Pilates</option>
+            <option value="4">Kickboxing</option>
+          </select>
+          </div>
+        </div>
+      <div class="button-row">
+          <a class="button" href="http://localhost:4200">Go Back</a>
+          <a class="button" (click)="editClick()">Edit Member</a>
+      </div>
+  </div>
+</div>
+
+
