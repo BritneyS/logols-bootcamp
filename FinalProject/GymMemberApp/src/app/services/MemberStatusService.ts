@@ -4,7 +4,7 @@ import { MemberStatus } from '../entities/MemberStatus';
 
 @Injectable()
 export class MemberStatusService {
-    url:string = "http://localhost:5000/api/GymMember";
+    url:string = "http://localhost:5000/api/GymMember/";
 
     constructor(private http: HttpClient) { }
 
@@ -13,7 +13,7 @@ export class MemberStatusService {
     }
 
     public get(id: number) {
-        return this.http.get<MemberStatus[]>(this.url + "/" + id);
+        return this.http.get<MemberStatus[]>(this.url + id);
     }
 
     public update(status: MemberStatus) {
@@ -25,6 +25,6 @@ export class MemberStatusService {
     }
 
     public delete(id: number) {
-        return this.http.delete(this.url + "/" + id);
+        return this.http.delete(this.url + id);
     }
 }
