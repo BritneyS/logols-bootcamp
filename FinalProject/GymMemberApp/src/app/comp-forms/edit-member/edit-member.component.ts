@@ -4,11 +4,11 @@ import { MemberStatus } from '../../entities/MemberStatus';
 import { MemberStatusService } from '../../services/MemberStatusService';
 
 @Component({
-  selector: 'app-delete-member',
-  templateUrl: './delete-member.component.html',
-  styleUrls: ['./delete-member.component.css']
+  selector: 'app-edit-member',
+  templateUrl: './edit-member.component.html',
+  styleUrls: ['./edit-member.component.css']
 })
-export class DeleteMemberComponent {
+export class EditMemberComponent {
   public memberStatus:MemberStatus;
   public statuses:MemberStatus[] = [];
   public filter:string = '';
@@ -16,15 +16,6 @@ export class DeleteMemberComponent {
 
   public constructor(private memberStatusService: MemberStatusService) {
     this.memberStatus = new MemberStatus();
-   /*  memberStatusService.getAll().subscribe(result => { 
-      for (let status of result) {
-        this.statuses.push(status);
-        this.filteredstatuses.push(status);
-      }
-      this.statuses = this.filteredstatuses;
-    }, error => {
-      console.log(error)
-    }); */
   }
 
   public getIDClick():void {
@@ -47,15 +38,6 @@ export class DeleteMemberComponent {
       this.filteredstatuses.pop();
       console.log("record removed");
     }
-  }
-
-
-  public deleteClick():void {
-    //console.log('test');
-    console.log(this.memberStatus);
-    this.memberStatusService.delete(this.memberStatus.memberID).subscribe(() => {
-      console.log("person deleted");
-    }, error => console.error(error));
   }
 
 }

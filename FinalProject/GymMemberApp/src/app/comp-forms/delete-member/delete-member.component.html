@@ -35,34 +35,9 @@
               </tbody>
           </table>
           </div> <!-- end of table container--> 
-        <label for="LastName">Last Name</label>
-          <input id="LastName" type="text" placeholder="Last Name"
-          [(ngModel)]="memberStatus.lastName">
-
-        <label for="MemberStatus">Member Status</label>
-        <div class="select-wrap">
-        <select required id="MemberStatus" [(ngModel)]="memberStatus.memberStatusID">
-          <option value="" disabled selected>Please Choose...</option>
-          <option value="1">Active</option>
-          <option value="2">Inactive</option>
-          <option value="3">Pending</option>
-        </select>
-        </div>
-
-        <label for="Class">Registered Class</label>
-        <div class="select-wrap">
-        <select required id="Class" [(ngModel)]="memberStatus.ClassID">
-          <option value="" disabled selected>Please Choose...</option>
-          <option value="1">Swim</option>
-          <option value="2">Yoga</option>
-          <option value="3">Pilates</option>
-          <option value="4">Kickboxing</option>
-        </select>
-        </div>
-      </div>
       <div class="button-row">
           <a class="button" href="http://localhost:4200">Go Back</a>
-          <a class="button" (click)="insertClick()">Add Member</a>
+          <a class="button" (click)="deleteClick()">Delete Member</a>
       </div>
   </div>
 </div>

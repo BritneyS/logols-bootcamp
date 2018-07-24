@@ -18,6 +18,7 @@ import { TablePilatesComponent } from './comp-children/table-pilates/table-pilat
 import { TableKickboxingComponent } from './comp-children/table-kickboxing/table-kickboxing.component';
 import { AddMemberComponent } from './comp-forms/add-member/add-member.component';
 import { DeleteMemberComponent } from './comp-forms/delete-member/delete-member.component';
+import { EditMemberComponent } from './comp-forms/edit-member/edit-member.component';
 
 const routes: Routes = [
   { path: 'gymAdmin', component: GymAdminComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'kickboxing', component: TableKickboxingComponent },
   { path: 'add', component: AddMemberComponent },
   { path: 'delete', component: DeleteMemberComponent },
+  { path: 'edit', component: EditMemberComponent },
   { path: '', component: TableAllComponent }
   /* { path: '', redirectTo: '/all', pathMatch: 'full' } */
 ];
@@ -45,7 +47,8 @@ const routes: Routes = [
     TablePilatesComponent,
     TableKickboxingComponent,
     AddMemberComponent,
-    DeleteMemberComponent
+    DeleteMemberComponent,
+    EditMemberComponent
   ],
   imports: [
     BrowserModule,

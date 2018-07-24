@@ -1,0 +1,73 @@
+.container, #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-field {
+    border: 1px solid rgb(253, 236, 250, 0.7);
+    border-radius: 5px;
+    background: rgb(253, 236, 250, 0.7);
+    width: 60rem;
+    padding: 10px;
+    margin: 50px;
+}
+
+input[type=text], input[type=number] {
+    background: rgb(255, 231, 245);
+}
+
+select {
+    background: rgb(255, 231, 245);
+}
+
+.select-wrap::after {
+    margin-left: -2em;
+    font-size: 0.75em;
+    pointer-events: none;
+    content: "▼";
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* .app-main {
+    background: rgb(253, 236, 250, 0.7);
+} */
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 1px solid rgb(3, 3, 3);
+    
+}
+
+#col2, #col3, #col4, #col5 {
+    border-left: 1px solid rgb(3, 3, 3);
+}
+
+tr {
+    background-color: rgb(255, 231, 245);
+}
+
+tbody tr:hover {
+    background-color: rgb(157, 95, 250);
+    color: rgb(255, 231, 245);
+}
+
+.table-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
