@@ -31,13 +31,24 @@ export class EditMemberComponent {
         }
       }
       this.statuses = this.filteredstatuses;
+      this.memberStatusService.get(this.memberStatus.memberID).subscribe((memberStatus) => this.memberStatus = memberStatus);
     }, error => {
       console.log(error)
-    })
+    }) 
+  
+
     if(this.filteredstatuses !== undefined) {
       this.filteredstatuses.pop();
       console.log("record removed");
     }
+  }
+
+
+  public editClick():void {
+    console.log(this.memberStatus);
+    this.memberStatusService.update(this.memberStatus).subscribe(() => {
+      console.log("person edited");
+    }, error => console.error(error));
   }
 
 }

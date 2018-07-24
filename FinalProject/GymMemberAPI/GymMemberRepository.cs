@@ -36,7 +36,7 @@ namespace GymMemberAPI
             {
                 dbConnection.Open();
                 return dbConnection.Query<Member>(
-                    "SELECT m.MemberID, m.FirstName, m.LastName, ms.MemberStatusDescription, c.ClassDescription "
+                    "SELECT m.MemberID, m.FirstName, m.LastName, ms.MemberStatusID, c.ClassID "
                     + "FROM gym.member m "
                     + "INNER JOIN gym.memberstatus ms "
                     + "ON m.MemberStatusID = ms.MemberStatusID "

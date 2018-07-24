@@ -13,7 +13,7 @@ export class MemberStatusService {
     }
 
     public get(id: number) {
-        return this.http.get<MemberStatus[]>(this.url + id);
+        return this.http.get<MemberStatus>(this.url + id);
     }
 
     public update(status: MemberStatus) {
