@@ -43,7 +43,6 @@ export class EditMemberComponent {
     }
   }
 
-
   public editClick():void {
     console.log(this.memberStatus);
     this.memberStatusService.update(this.memberStatus).subscribe(() => {

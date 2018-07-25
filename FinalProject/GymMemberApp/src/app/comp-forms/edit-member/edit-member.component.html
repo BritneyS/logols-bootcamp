@@ -33,6 +33,10 @@
           </table>
           </div> <!-- end of table container-->
         <div>
+          <label for="MemberID">Member ID</label>
+            <input [disabled]="true"id="MemberID" type="text" placeholder="Member ID"
+            [(ngModel)]="memberStatus.memberID">
+
           <label for="FirstName">First Name</label>
             <input id="FirstName" type="text" placeholder="First Name"
             [(ngModel)]="memberStatus.firstName">

@@ -78,7 +78,7 @@ namespace GymMemberAPI
                     + "SET FirstName = @FirstName, LastName = @LastName, MemberStatusID = @MemberStatusID, ClassID = @ClassID "
                     + "WHERE MemberID = @MemberID;"
                     ,new {
-
+                        MemberID = Member.MemberID,
                         FirstName = Member.FirstName,
                         LastName = Member.LastName,
                         MemberStatusID = Member.MemberStatusID,
