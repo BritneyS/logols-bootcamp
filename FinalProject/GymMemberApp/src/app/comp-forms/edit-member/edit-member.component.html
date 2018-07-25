@@ -19,6 +19,7 @@
                       <th>Member ID</th>
                       <th id="col2">First Name</th>
                       <th id="col3">Last Name</th>
+                      <th id="col4">Member Status</th>
                       <th id="col5">Registered Class</th>
                   </tr>
               </thead>
@@ -27,6 +28,7 @@
                     <td *ngIf="status.memberID == memberStatus.memberID">{{status.memberID}}</td>
                     <td id="col2" *ngIf="status.memberID == memberStatus.memberID">{{status.firstName}}</td>
                     <td id="col3" *ngIf="status.memberID == memberStatus.memberID">{{status.lastName}}</td>
+                    <td id="col4" *ngIf="status.memberID == memberStatus.memberID">{{status.memberStatusDescription}}</td>
                     <td id="col5" *ngIf="status.memberID == memberStatus.memberID">{{status.classDescription}}</td>
                   </tr>
               </tbody>
