@@ -47,6 +47,7 @@ export class EditMemberComponent {
     console.log(this.memberStatus);
     this.memberStatusService.update(this.memberStatus).subscribe(() => {
       console.log("person edited");
+      alert("Member edit successful.");
     }, error => console.error(error));
   }
 

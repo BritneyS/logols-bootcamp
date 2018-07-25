@@ -21,6 +21,7 @@ export class AddMemberComponent {
     console.log(this.memberStatus);
     this.memberStatusService.insert(this.memberStatus).subscribe(() => {
       console.log("person inserted");
+      alert("Member added.");
     }, error => console.error(error));
   }
 

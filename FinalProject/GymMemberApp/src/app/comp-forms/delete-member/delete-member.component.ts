@@ -55,6 +55,7 @@ export class DeleteMemberComponent {
     console.log(this.memberStatus);
     this.memberStatusService.delete(this.memberStatus.memberID).subscribe(() => {
       console.log("person deleted");
+      alert("Member deleted.");
     }, error => console.error(error));
   }
 
