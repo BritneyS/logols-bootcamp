@@ -11,20 +11,9 @@ import { MemberStatusService } from '../../services/MemberStatusService';
 export class DeleteMemberComponent {
   public memberStatus:MemberStatus;
   public statuses:MemberStatus[] = [];
-  public filter:string = '';
-  public filteredstatuses:MemberStatus[] = [];
 
   public constructor(private memberStatusService: MemberStatusService) {
     this.memberStatus = new MemberStatus();
-   /*  memberStatusService.getAll().subscribe(result => { 
-      for (let status of result) {
-        this.statuses.push(status);
-        this.filteredstatuses.push(status);
-      }
-      this.statuses = this.filteredstatuses;
-    }, error => {
-      console.log(error)
-    }); */
   }
 
   public getIDClick():void {
@@ -33,18 +22,17 @@ export class DeleteMemberComponent {
       for (let status of result) {
         if (status.memberID == this.memberStatus.memberID) {
           console.log("status.memberID: " + status.memberID);
-          this.filteredstatuses.push(status);
+          this.statuses.push(status);
         }
         else {
           console.log("condition false");
         }
       }
-      this.statuses = this.filteredstatuses;
     }, error => {
       console.log(error)
     })
-    if(this.filteredstatuses !== undefined) {
-      this.filteredstatuses.pop();
+    if(this.statuses !== undefined) {
+      this.statuses.pop();
       console.log("record removed");
     }
   }

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using GymMemberAPI;
 
 namespace GymMemberAPI.Controllers
 {
     [Route("api/[controller]")] //URL: .../api/[controller] where [controller] is controller name
     public class GymMemberController : Controller
     {
-        GymMemberRepository repository;
+        private GymMemberRepository repository;
 
         public GymMemberController()
         {
@@ -18,7 +19,7 @@ namespace GymMemberAPI.Controllers
 
         // GET api/GymMember
         [HttpGet]
-        public List<GymMemberAPI.Member> Get()
+        public List<Member> Get()
         {
             return repository.GetAll();
         }
@@ -32,7 +33,7 @@ namespace GymMemberAPI.Controllers
 
         // POST api/GymMember
         [HttpPost]
-        public void Post([FromBody]GymMemberAPI.Member Member)
+        public void Post([FromBody]Member Member)
         {
            repository.Insert(Member);
         }
@@ -40,7 +41,7 @@ namespace GymMemberAPI.Controllers
         // PUT api/GymMember/5
         //[HttpPut("{id}")]
         [HttpPut]
-        public void Put(/*int id,*/ [FromBody]GymMemberAPI.Member Member)
+        public void Put([FromBody]Member Member)
         {
             repository.Update(Member);
         }
